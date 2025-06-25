@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ar {
+  background-color: #e24e7a;
+}
+
+.ar:hover {
+  outline: none;
+}
+
+.space {
+  padding: 30px;
+}
+
+.card {
+  padding: 2em;
+}
