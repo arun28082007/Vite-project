@@ -1,28 +1,66 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-  
-
   return (
-    <>
-    <div className="header">My Header</div>
-    <input className="input" placeholder="Enter Name"/>
-      
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          increase
-        </button>
+    <div className="portfolio">
+      <header className="header">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <div className='space'>{count}</div>
+      <main>
+        <section id="hero">
+          <div className="hero-content">
+            <h1>Your Name</h1>
+            <p>Frontend Developer | UI/UX Enthusiast</p>
+          </div>
+        </section>
 
-        <button className='ar' onClick={() => setCount((count) => count - 1)}>
-          decrease
-        </button>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a passionate developer with a love for creating beautiful and functional web experiences. I specialize in React and modern JavaScript, and I'm always looking to learn new things.
+          </p>
+        </section>
 
-      </div >
-    </>
+        <section id="projects">
+          <h2>My Projects</h2>
+          <div className="project-grid">
+            <div className="project-card">
+              <h3>Project One</h3>
+              <p>A brief description of the project.</p>
+              <a href="#">View Project</a>
+            </div>
+            <div className="project-card">
+              <h3>Project Two</h3>
+              <p>A brief description of the project.</p>
+              <a href="#">View Project</a>
+            </div>
+            <div className="project-card">
+              <h3>Project Three</h3>
+              <p>A brief description of the project.</p>
+              <a href="#">View Project</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Get In Touch</h2>
+          <p>I'm currently available for freelance work. Drop me a line!</p>
+          <a href="mailto:your.email@example.com" className="cta-button">Email Me</a>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+      </footer>
+    </div>
   );
 }
 
